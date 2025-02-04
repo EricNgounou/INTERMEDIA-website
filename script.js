@@ -790,3 +790,5 @@ setInterval(function () {
   console.log(curImgIndex);
   imageSlider(curImgIndex);
 }, timeout * 1000);
+
+console.log('Git ignore added');
