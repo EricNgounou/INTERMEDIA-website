@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /*
 async function sleep(millis) {
   const sleeper = await new Promise((resolve) =>
@@ -757,20 +757,20 @@ console.log(frequencySort('cccaaa'));
 console.log(frequencySort('Aabb'));
 */
 
-const navLinks = document.querySelector('.nav__links');
-const navItems = document.querySelectorAll('.nav__item');
-const bars = document.querySelectorAll('.bar');
-const slider = document.querySelector('.services_slide-show');
-const img = document.querySelector('.services_slide-show').querySelector('img');
+const navLinks = document.querySelector(".nav__links");
+const navItems = document.querySelectorAll(".nav__item");
+const bars = document.querySelectorAll(".bar");
+const slider = document.querySelector(".services_slide-show");
+const img = document.querySelector(".services_slide-show").querySelector("img");
 
-navLinks.addEventListener('click', function (e) {
-  const navItem = e.target.closest('.nav__item');
+navLinks.addEventListener("click", function (e) {
+  const navItem = e.target.closest(".nav__item");
   if (!navItem) return;
-  bars.forEach(bar => bar.classList.remove('bar_active'));
-  navItems.forEach(nav => nav.classList.remove('nav__item-active'));
+  bars.forEach((bar) => bar.classList.remove("bar_active"));
+  navItems.forEach((nav) => nav.classList.remove("nav__item-active"));
   const bar = navItem.lastElementChild;
-  bar.classList.add('bar_active');
-  navItem.classList.add('nav__item-active');
+  bar.classList.add("bar_active");
+  navItem.classList.add("nav__item-active");
 });
 
 const totalImg = 13;
@@ -779,16 +779,16 @@ const timeout = 10; // in seconds
 let curImgIndex = 1;
 
 const imageSlider = function (imgIndex) {
-  slider.innerHTML = '';
+  slider.innerHTML = "";
   const image = `  <img src="imgs/services-img/img${imgIndex}.jpg" />`;
-  slider.insertAdjacentHTML('beforeend', image);
+  slider.insertAdjacentHTML("beforeend", image);
 };
 
 setInterval(function () {
-  img.computedStyleMap.transform = 'translateX(300%)';
+  img.computedStyleMap.transform = "translateX(300%)";
   curImgIndex = curImgIndex === totalImg ? 1 : ++curImgIndex;
   console.log(curImgIndex);
   imageSlider(curImgIndex);
 }, timeout * 1000);
 
-console.log('Git ignore added');
+console.log("New site");
